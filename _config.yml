@@ -1,0 +1,56 @@
+# Hexaxia Technical Blog
+# AEO-optimized GitHub Pages site
+
+title: Hexaxia Technical Blog
+description: >-
+  Cybersecurity insights, CMMC compliance case studies, and technical guides
+  from Hexaxia Technologies. Real-world implementations and lessons learned.
+author: Aaron Lamb
+email: aaron@hexaxia.tech
+url: "https://alamb-hex.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections for blog organization
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Default frontmatter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Aaron Lamb"
+
+# SEO settings
+twitter:
+  username: hexaxiatech
+  card: summary_large_image
+
+social:
+  name: Hexaxia Technologies
+  links:
+    - https://github.com/alamb-hex
+    - https://linkedin.com/company/hexaxia
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - README.md
