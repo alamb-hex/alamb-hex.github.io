@@ -19,46 +19,6 @@ I'm betting on **Answer Engine Optimization (AEO)** over traditional SEO. When s
 
 Writing on GitHub gives me developer credibility + LLM ingestion + a permanent home for my thinking.
 
-## Tech Stack
-
-- **Jekyll** - Static site generator (GitHub Pages native support)
-- **GitHub Pages** - Free hosting with automatic deployment
-- **Plugins:**
-  - `jekyll-seo-tag` - Automated SEO meta tags
-  - `jekyll-sitemap` - Automatic sitemap.xml generation
-  - `jekyll-feed` - RSS feed for subscribers
-
-## Local Development
-
-```bash
-# Install dependencies
-bundle install
-
-# Run local server
-bundle exec jekyll serve
-
-# View at http://localhost:4000
-```
-
-## Writing Posts
-
-Create new posts in `_posts/` directory with filename format:
-```
-YYYY-MM-DD-post-title.md
-```
-
-Required frontmatter:
-```yaml
----
-layout: post
-title: "Your Post Title"
-date: YYYY-MM-DD
-categories: [category1, category2]
-tags: [tag1, tag2, tag3]
-description: "SEO description for this post"
----
-```
-
 ## What I Write About
 
 **Cybersecurity & Compliance:**
@@ -86,5 +46,3 @@ I write the long-form technical version here on GitHub, then:
 ---
 
 **Aaron Lamb** • Cybersecurity consulting • CMMC compliance • Building in public
-
-**Callsign:** KV9L (when I'm not writing code, I'm on HF radio or sailing in the Caribbean)
