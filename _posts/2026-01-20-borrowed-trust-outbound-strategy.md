@@ -5,7 +5,7 @@ date: 2026-01-20
 categories: [marketing, sales, strategy]
 tags: [linkedin, outbound, referrals, aeo, gtm]
 author: Aaron Lamb
-description: "How to systematically leverage satisfied client networks for warm outbound at scale using LinkedIn's 'connections of' filter. Based on insights from Powderkeg GTM Mastermind."
+description: "How to systematically leverage satisfied client networks for warm outbound at scale using LinkedIn's 'connections of' filter. A practical framework for bootstrap-stage businesses."
 image: /assets/images/borrowed-trust-strategy.png
 ---
 
@@ -17,13 +17,13 @@ image: /assets/images/borrowed-trust-strategy.png
 
 ## What is "Borrowed Trust"?
 
-Coined by Morgan J Ingram at the Powderkeg GTM Mastermind (Jan 2026), borrowed trust is a systematic approach to leveraging existing client relationships for warm outbound.
+Borrowed trust is a systematic approach to leveraging existing client relationships for warm outbound. Instead of cold outreach, you strategically access the networks of satisfied clients.
 
 **The Core Insight:** People trust recommendations from their connections far more than cold messages from salespeople. This strategy formalizes and scales that dynamic.
 
 ## Why This Works Now
 
-**LinkedIn Deliverability:** Morgan Ingram reported **100% deliverability** on LinkedIn vs. declining email deliverability due to Gmail/Yahoo restrictions.
+**LinkedIn Deliverability:** LinkedIn currently maintains near-**100% deliverability** vs. declining email deliverability due to Gmail/Yahoo restrictions.
 
 **Answer Engine Optimization (AEO):** LinkedIn is currently the #2 source cited by Large Language Models (LLMs), predicted to become #1 within 6-12 months. This makes LinkedIn presence critical for getting cited when prospects ask AI for recommendations.
 
@@ -33,7 +33,7 @@ Coined by Morgan J Ingram at the Powderkeg GTM Mastermind (Jan 2026), borrowed t
 
 ### Step 1: Gather "Raw" Proof
 
-Collect screenshots or quotes from clients who explicitly praised your service. Morgan emphasizes screenshots over text because they're "raw" and "real" proof that's difficult to fake.
+Collect screenshots or quotes from clients who explicitly praised your service. Screenshots are preferable over text because they're "raw" and "real" proof that's difficult to fake.
 
 **Sources:**
 - LinkedIn testimonials
@@ -65,7 +65,7 @@ LinkedIn Sales Navigator has a specific filter called "connections of" that iden
 
 Message the connected prospects referencing the mutual connection and the proof.
 
-**Morgan's Script:**
+**Example Script:**
 > "Hey [prospect name]. [Mutual connection name] really liked [specific outcome/project]. Would you be interested in learning more about how we achieved [specific result]?"
 
 **Alternative for events:**
@@ -77,9 +77,9 @@ Message the connected prospects referencing the mutual connection and the proof.
 - Uses "borrowed trust" instead of building from zero
 - Significantly higher response rates than cold outreach
 
-## Real-World Example: Matt Hunckler's Podcast Strategy
+## Real-World Example: The Podcast Strategy
 
-Matt shared how podcast hosts effectively use this strategy:
+This approach is particularly effective for content creators. Here's how podcast hosts leverage it:
 
 1. Interview a guest on their podcast
 2. Use "connections of" filter for that guest in Sales Navigator
@@ -130,7 +130,7 @@ Matt shared how podcast hosts effectively use this strategy:
 1. **For each satisfied client:**
    - Use Sales Navigator "connections of" filter
    - Start with 5-10 connections (test and iterate)
-   - Message using Morgan's script template
+   - Message using the example script template above
    - Track response rates
 
 2. **Content Strategy:**
@@ -150,7 +150,7 @@ Matt shared how podcast hosts effectively use this strategy:
 
 ## Critical Success Metrics
 
-**Don't track vanity metrics.** Morgan's insight: If a post receives more saves/sends than reactions (likes/comments), you've hit a real pain point.
+**Don't track vanity metrics.** Key insight: If a post receives more saves/sends than reactions (likes/comments), you've hit a real pain point.
 
 **Why saves matter:**
 - Can't be faked — requires actual value perception
@@ -178,6 +178,4 @@ Successful organic content (validated by high save rates) → Amplify through th
 
 ---
 
-**About the Author:** Aaron Lamb is the founder of Hexaxia Technologies, providing cybersecurity consulting and CMMC compliance services. This strategy was captured from the Powderkeg GTM Mastermind (Jan 20, 2026) facilitated by Morgan J Ingram and Justin Fite.
-
-**Attribution:** Core strategy and quotes from Morgan J Ingram (AMP Social, Sales Team Six™), Justin Fite (J3 Consulting), and Matt Hunckler (Powderkeg). Adapted for bootstrap-stage businesses and cybersecurity consulting context.
+**About the Author:** Aaron Lamb is the founder of Hexaxia Technologies, providing cybersecurity consulting and CMMC compliance services for construction firms, manufacturers, and defense contractors.
