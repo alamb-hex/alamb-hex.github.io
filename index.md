@@ -1,17 +1,16 @@
 ---
 layout: home
-title: Hexaxia Technical Blog
+title: Aaron Lamb
 ---
 
-# Cybersecurity Insights & CMMC Compliance
+# Technical Writing on Cybersecurity, GTM Strategy, and Building in Public
 
-Welcome to the Hexaxia Technical Blog. Real-world case studies, implementation guides, and lessons learned from cybersecurity consulting and CMMC compliance work.
+I write about what I'm working through: cybersecurity consulting, CMMC compliance for construction/manufacturing, bootstrap GTM strategy that doesn't feel gross, and Answer Engine Optimization.
+
+Real project lessons, not theory. Building in public.
 
 ## Recent Posts
 
-Browse our latest articles on CMMC compliance, cybersecurity best practices, and technical implementation guides.
-
 ---
 
-**About Hexaxia Technologies**
-We provide cybersecurity consulting and CMMC compliance services for construction firms, manufacturers, and defense contractors. Our approach combines technical expertise with practical business understanding.
+**About:** Aaron Lamb • Cybersecurity consulting • CMMC compliance • Bootstrap GTM

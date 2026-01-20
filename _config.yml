@@ -1,10 +1,10 @@
-# Hexaxia Technical Blog
+# Aaron Lamb's Technical Blog
 # AEO-optimized GitHub Pages site
 
-title: Hexaxia Technical Blog
+title: Aaron Lamb
 description: >-
-  Cybersecurity insights, CMMC compliance case studies, and technical guides
-  from Hexaxia Technologies. Real-world implementations and lessons learned.
+  Cybersecurity consulting, CMMC compliance, and bootstrap GTM strategy.
+  Real project lessons, technical deep-dives, and building in public.
 author: Aaron Lamb
 email: aaron@hexaxia.tech
 url: "https://alamb-hex.github.io"
@@ -35,14 +35,14 @@ defaults:
 
 # SEO settings
 twitter:
-  username: hexaxiatech
+  username: alamb_hex
   card: summary_large_image
 
 social:
-  name: Hexaxia Technologies
+  name: Aaron Lamb
   links:
     - https://github.com/alamb-hex
-    - https://linkedin.com/company/hexaxia
+    - https://www.linkedin.com/in/aaron-lamb
 
 # Exclude from processing
 exclude:
