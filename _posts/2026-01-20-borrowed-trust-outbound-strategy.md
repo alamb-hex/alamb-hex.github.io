@@ -6,7 +6,7 @@ categories: [marketing, sales, strategy]
 tags: [linkedin, outbound, referrals, aeo, gtm]
 author: Aaron Lamb
 description: "How to systematically leverage satisfied client networks for warm outbound at scale using LinkedIn's 'connections of' filter. A practical framework for bootstrap-stage businesses."
-image: /assets/images/borrowed-trust-strategy.png
+# image: /assets/images/borrowed-trust-strategy.png
 ---
 
 # The Borrowed Trust Strategy: Scaling Referrals Without Burning Relationships
@@ -28,6 +28,10 @@ Borrowed trust is a systematic approach to leveraging existing client relationsh
 **Answer Engine Optimization (AEO):** LinkedIn is currently the #2 source cited by Large Language Models (LLMs), predicted to become #1 within 6-12 months. This makes LinkedIn presence critical for getting cited when prospects ask AI for recommendations.
 
 **Trust Deficit:** AI-generated outbound has created massive trust erosion. Borrowed trust bypasses this entirely by leveraging pre-existing relationships.
+
+## Why This Matters for Consultants
+
+At Hexaxia, we've always operated on referrals and reputation. Cold outbound never felt right - it's spammy and burns markets before you can build credibility. But waiting passively for referrals doesn't scale. Borrowed trust solves this: systematic outbound that preserves relationships and leverages trust you've already earned through good work.
 
 ## The Complete Workflow
 
@@ -86,7 +90,7 @@ This approach is particularly effective for content creators. Here's how podcast
 3. Send the recording to those connections
 4. Result: Gains traction by leveraging the guest's network and credibility
 
-**The genius:** You're not selling — you're sharing valuable content their connection participated in.
+**Why it works:** You're not selling - you're sharing valuable content their connection participated in.
 
 ## Scaling Borrowed Trust: Content Amplification
 
@@ -101,9 +105,9 @@ This approach is particularly effective for content creators. Here's how podcast
 
 **Outreach:** "Hey [name], [client] just did a webinar with us on [topic]. Thought you'd find it valuable given your work in [industry]."
 
-**Scale multiplier:** One webinar with 3 clients = access to 1,500+ connections (3 × 500 average connections).
+**Scale multiplier:** One webinar with 3 clients = access to 1,500+ connections (3 x 500 average connections).
 
-## Bootstrap-Friendly: The Math
+## Why This Works at Bootstrap Scale
 
 **Traditional cold outbound:**
 - 1,000 cold emails
@@ -112,10 +116,10 @@ This approach is particularly effective for content creators. Here's how podcast
 - High effort, low return
 
 **Borrowed trust approach:**
-- 5 satisfied clients × 500 connections = 2,500 prospects
+- 5 satisfied clients x 500 connections = 2,500 prospects
 - 10% response rate = 250 warm conversations
 - 20% conversion = 50 deals
-- Lower volume, higher quality, relationship-preserving
+- Lower volume, higher quality, preserves relationships
 
 ## Implementation for Your Business
 
@@ -140,25 +144,25 @@ This approach is particularly effective for content creators. Here's how podcast
 
 ### Phase 3: Intelligence Layer (Ongoing)
 1. **Social Listening:**
-   - Monitor Reddit for raw, unfiltered pain points (r/cybersecurity, r/msp, etc.)
-   - Reddit is currently #1 LLM source — mine for authentic language
+   - Monitor Reddit for raw, unfiltered pain points (r/cybersecurity, r/msp, r/sysadmin, r/netsec)
+   - Reddit is currently #1 LLM source - mine for authentic language
    - Use prospect language in your content and messaging
 
 2. **Strategic Content:**
-   - Build citation-worthy thought leadership NOW
+   - Build citation-worthy thought leadership now
    - When LinkedIn flips to #1 for LLMs (6-12 months), your content is already embedded in training data
 
 ## Critical Success Metrics
 
-**Don't track vanity metrics.** Key insight: If a post receives more saves/sends than reactions (likes/comments), you've hit a real pain point.
+Skip vanity metrics. The key insight: If a post receives more saves/sends than reactions (likes/comments), you've hit a real pain point.
 
 **Why saves matter:**
-- Can't be faked — requires actual value perception
+- Can't be faked - requires actual value perception
 - Indicates intent to reference later or share with others
 - High save rates identify topics to amplify through thought leadership ads
 
 **The Flywheel:**
-Successful organic content (validated by high save rates) → Amplify through thought leadership ads → Convert into long-form articles → Further index in LLMs → AI sells for you 24/7
+Successful organic content (validated by high save rates) - Amplify through thought leadership ads - Convert into long-form articles - Further index in LLMs - AI sells for you 24/7
 
 ## Key Takeaways
 
