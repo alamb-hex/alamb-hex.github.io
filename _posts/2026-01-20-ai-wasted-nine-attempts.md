@@ -3,14 +3,14 @@ layout: post
 title: "When Your AI Assistant Wastes 9 Attempts: Building Better Interfaces"
 date: 2026-01-20
 categories: [development, ai, tooling]
-tags: [ai, efficiency, automation, claude, rag, developer-experience]
+tags: [ai, efficiency, automation, rag, developer-experience]
 author: Aaron Lamb
 description: "How a simple wrapper script eliminated 90% of AI command failures. A practical case study in building AI-friendly tooling."
 ---
 
 # When Your AI Assistant Wastes 9 Attempts: Building Better Interfaces
 
-I use Claude Code heavily for technical work. It's great at architecture, debugging, writing code. But I noticed a pattern: certain tasks resulted in multiple failed attempts before success.
+I use an AI coding assistant heavily for technical work. It's great at architecture, debugging, writing code. But I noticed a pattern: certain tasks resulted in multiple failed attempts before success.
 
 **The symptom:** 9 consecutive errors trying to do one simple thing.
 
@@ -20,7 +20,7 @@ I use Claude Code heavily for technical work. It's great at architecture, debugg
 
 ## The Problem: 9 Failed Attempts
 
-I asked Claude to add some documents to my RAG (Retrieval Augmented Generation) system. Simple task. Here's what happened:
+I asked the AI assistant to add some documents to my RAG (Retrieval Augmented Generation) system. Simple task. Here's what happened:
 
 ```bash
 # Attempt 1-3: Wrong Python command
@@ -38,11 +38,11 @@ source venv/bin/activate && python episodic_memory.py --add file.md
 
 **The actual command needed:**
 ```bash
-cd .claude/rag && source venv/bin/activate && \
+cd .ai/rag && source venv/bin/activate && \
   python embed_documents.py --files ../../output/file.md
 ```
 
-Claude eventually got there, but wasted significant time (and my API budget) failing first.
+the AI assistant eventually got there, but wasted significant time (and my API budget) failing first.
 
 ## Why This Happens
 
@@ -77,7 +77,7 @@ python episodic_memory.py --store \
 python embed_documents.py --files path/to/file.md
 ```
 
-Both lived in `.claude/rag/`, both required venv activation, both processed markdown files. **Claude couldn't reliably pick the right one.**
+Both lived in `.ai/rag/`, both required venv activation, both processed markdown files. **the AI assistant couldn't reliably pick the right one.**
 
 Add in:
 - Ubuntu's `python` vs `python3` quirk
@@ -93,7 +93,7 @@ I created a simple wrapper script:
 
 ```bash
 #!/bin/bash
-# ./sage-rag - Single entry point for all RAG operations
+# ./rag-cli - Single entry point for all RAG operations
 
 VENV_PYTHON="$SCRIPT_DIR/venv/bin/python3"
 
@@ -118,17 +118,17 @@ case "${1:-help}" in
         ;;
 
     *)
-        echo "Usage: ./sage-rag [embed|episode|search|health]"
+        echo "Usage: ./rag-cli [embed|episode|search|health]"
         ;;
 esac
 ```
 
 **New interface:**
 ```bash
-./sage-rag embed --files output/file.md
-./sage-rag episode --list
-./sage-rag search "query"
-./sage-rag health
+./rag-cli embed --files output/file.md
+./rag-cli episode --list
+./rag-cli search "query"
+./rag-cli health
 ```
 
 **What this eliminates:**
@@ -146,20 +146,20 @@ I also added a quick reference file the AI reads first:
 
 **`QUICK-REF.md`:**
 ```markdown
-# Quick Reference for Claude
+# Quick Reference for AI Assistant
 
-**Use the wrapper script `./sage-rag` instead of calling Python directly.**
+**Use the wrapper script `./rag-cli` instead of calling Python directly.**
 
 ## Common Operations
 
 ### Embed Documents
 ```bash
-cd .claude/rag && ./sage-rag embed --files ../../output/filename.md
+cd .ai/rag && ./rag-cli embed --files ../../output/filename.md
 ```
 
 ### Search
 ```bash
-cd .claude/rag && ./sage-rag search "your query"
+cd .ai/rag && ./rag-cli search "your query"
 ```
 
 ## Common Mistakes to Avoid
@@ -169,7 +169,7 @@ cd .claude/rag && ./sage-rag search "your query"
 3. **Don't try "add" command** - uses `--store`, not `add`
 ```
 
-Now when Claude needs to use RAG:
+Now when the AI assistant needs to use RAG:
 1. Reads `QUICK-REF.md` (3 seconds)
 2. Uses correct command (first try)
 3. Moves on
@@ -236,7 +236,7 @@ Error: unrecognized arguments
 ```
 Error: unrecognized command 'add'
 Did you mean: --store (for episodes) or embed (for documents)?
-See ./sage-rag help
+See ./rag-cli help
 ```
 
 ## Implementation Checklist

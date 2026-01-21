@@ -12,9 +12,9 @@ description: "How a simple structured registry eliminated context confusion acro
 
 When you work across 30+ projects, your AI agent's biggest problem isn't intelligence. It's context.
 
-Sage, my AI executive assistant, kept asking the same questions: "Which project is this for?" "Where does that file live?" "Is ULS a ham radio thing or a customer?"
+my AI executive assistant kept asking the same questions: "Which project is this for?" "Where does that file live?" "Is XYZ the client company or the internal project?"
 
-That last one actually happened. Sage confused United Life Services (a client paying $3,600/month) with the FCC's Universal Licensing System.
+That last one actually happened. my AI assistant confused a high-value client with an internal research initiative that shared the same acronym.
 
 Not because it was stupid. Because the context was scattered across memory files, old notes, and my head.
 
@@ -25,16 +25,16 @@ Not because it was stupid. Because the context was scattered across memory files
 Here's what a typical interaction looked like before:
 
 > **Me:** Check the contract status
-> **Sage:** Which contract? I see references to KE-GPT, Pax Nocturna, and several others.
-> **Me:** KE
-> **Sage:** Got it. Looking at ke-agent...
+> **my AI assistant:** Which contract? I see references to Client-A, Project-B, and several others.
+> **Me:** Client A
+> **my AI assistant:** Got it. Looking at client-a-app...
 > **Me:** No, the contract is in the company folder, not the code folder.
 
 This happened constantly. Every task required 2-3 rounds of clarification. The friction added up fast.
 
 ## The Solution: Project Registry
 
-The Project Registry is a structured markdown file at `.claude/memory/projects.md`. It contains everything Sage needs to understand my project landscape.
+The Project Registry is a structured markdown file at `.ai/memory/projects.md`. It contains everything my AI assistant needs to understand my project landscape.
 
 ### Project Types Matter
 
@@ -51,7 +51,7 @@ I defined six types:
 | **Research** | R&D and experimental projects |
 | **Personal** | Personal projects and planning |
 
-This distinction is critical. When I say "check the KE files," Sage now knows to look in the company folder for contracts, not the code folder for source files.
+This distinction is critical. When I say "check the Client A files," my AI assistant now knows to look in the company folder for contracts, not the code folder for source files.
 
 ### Owner Mapping
 
@@ -59,11 +59,11 @@ Every project has an owner or client. The registry maps this explicitly:
 
 | Owner | Company Folder | Code Projects |
 |-------|----------------|---------------|
-| **KE Construction** | ke-construction | KE-Agent, KE-GPT |
-| **ULS** | uls | (none) |
-| **Hexaxia** | hexaxia-internal | Hextant, AgentForge, HexCMS |
+| **Client A** | client-a | ClientApp, ClientGPT |
+| **Client B** | client-b | (none) |
+| **Internal** | company-internal | ProductX, ProductY, CMS |
 
-Now when someone mentions "Jay's project," Sage immediately knows that means KE Construction, which has both company folders and code projects.
+Now when someone mentions a key contact's project, my AI assistant immediately knows which company it refers to, and whether it has both company folders (contracts) and code projects.
 
 ### Relationship Mapping
 
@@ -71,50 +71,50 @@ Projects don't exist in isolation. They depend on each other, share technology, 
 
 **Dependencies:**
 ```
-Ham Radio Today → HexCMS (content management)
-Lyfe Uncharted → HexCMS (content management)
-Sage → APF (operational protocols)
+Blog A → CMS (content management)
+Blog B → CMS (content management)
+AI Assistant → Framework (operational protocols)
 ```
 
 **Business Hierarchy:**
 ```
-Hexaxia Technologies (parent)
-├── Hexaxia AI (division)
-│   ├── Hextant (product)
-│   ├── AgentForge (product)
-│   └── hexaxia.ai (marketing site)
-├── Hexaxia Media (division)
-│   └── TT Carnival 2026 (first project)
+Company (parent)
+├── AI Division
+│   ├── Product X (product)
+│   ├── Product Y (product)
+│   └── ai-site (marketing site)
+├── Media Division
+│   └── Event Project (first project)
 └── Websites
-    ├── hexaxia.tech (main company)
-    └── hexaxia.com (splash)
+    ├── main-site (main company)
+    └── splash (splash)
 ```
 
 **Shared Tech Stacks:**
 
 | Stack | Projects |
 |-------|----------|
-| Next.js 16 + Tailwind v4 | DDTS, KE-Agent, HexCMS Studio |
-| Next.js 15 + HexCMS | Ham Radio Today, Lyfe Uncharted |
-| Next.js + Supabase | AgentForge, KE-Agent |
+| Next.js + Tailwind | Site A, ClientApp, CMS Studio |
+| Next.js + CMS | Blog A, Blog B |
+| Next.js + Database | ProductX, ClientApp |
 
-Understanding these relationships means Sage can apply fixes to shared dependencies, understand upgrade impacts, and route questions correctly.
+Understanding these relationships means my AI assistant can apply fixes to shared dependencies, understand upgrade impacts, and route questions correctly.
 
 ## How It Works
 
-The registry is embedded into my RAG (Retrieval Augmented Generation) system using local Ollama embeddings. When I ask Sage a question, it semantically searches the registry for relevant context before responding.
+The registry is embedded into my RAG (Retrieval Augmented Generation) system using local Ollama embeddings. When I ask my AI assistant a question, it semantically searches the registry for relevant context before responding.
 
 **Example workflow:**
 
-1. I say: "What's the status on Jay's project?"
-2. Sage searches RAG, finds "Jay" associated with "KE Construction"
+1. I say: "What's the status on the construction client's project?"
+2. my AI assistant searches RAG, finds the contact associated with "Client A"
 3. Registry shows: company folder + code project paths
-4. Sage reads the relevant files and gives an accurate status update
+4. my AI assistant reads the relevant files and gives an accurate status update
 
 **After the registry:**
 
-> **Me:** Check the KE contract status
-> **Sage:** Contract v0.9.1 is drafted, awaiting signatures. $12k total, 20/40/40 payment structure.
+> **Me:** Check the Client A contract status
+> **my AI assistant:** Contract v0.9.1 is drafted, awaiting signatures. $12k total, 20/40/40 payment structure.
 
 That's the difference between an assistant and a friction generator.
 
@@ -163,7 +163,7 @@ The company/code/site distinction wasn't obvious at first. But an AI agent needs
 
 ### 3. Relationships Are High Value
 
-The dependency graph and business hierarchy took 10 minutes to write but provide disproportionate value. When Sage understands organizational structure, it navigates conversations without getting confused.
+The dependency graph and business hierarchy took 10 minutes to write but provide disproportionate value. When my AI assistant understands organizational structure, it navigates conversations without getting confused.
 
 ### 4. Embed Locally
 
@@ -195,7 +195,7 @@ AI agents are only as good as their context. You can have the most capable model
 
 The smarter the agent, the more it suffers from context gaps.
 
-By building a structured, searchable, authoritative source of project truth, we turned Sage from a capable but confused assistant into one that actually knows what I'm talking about.
+By building a structured, searchable, authoritative source of project truth, we turned my AI assistant from a capable but confused assistant into one that actually knows what I'm talking about.
 
 **The best part:** This solves a human problem too. The registry is now my go-to reference when I need to remember project details.
 
@@ -203,4 +203,4 @@ Good tools make both humans and AI more effective.
 
 ---
 
-**About the Author:** Aaron Lamb is the founder of Hexaxia Technologies, specializing in cybersecurity consulting, infrastructure engineering, and AI product development. He builds AI-powered tools for MSPs and SMBs, including Hextant (virtual C-suite) and AgentForge (white-label agent framework).
+**About the Author:** Aaron Lamb is the founder of Hexaxia Technologies, specializing in cybersecurity consulting, infrastructure engineering, and AI product development.
