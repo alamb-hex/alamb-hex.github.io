@@ -28,44 +28,55 @@ Here's what bothered me about existing solutions:
 
 I made one architectural decision that solved multiple problems: **Content lives in Git. Everything else is derived.**
 
-Here's the entire workflow:
+Here's the core workflow:
 1. Write Markdown in Git (any repo, any branch)
 2. Push to GitHub/GitLab
-3. Webhook triggers sync to PostgreSQL
-4. Next.js serves content via ISR (Incremental Static Regeneration)
+3. Next.js reads from Git and serves content via ISR
+
+**That's it.** No database required.
+
+But if you need performance at scale, HexCMS supports an **optional PostgreSQL cache**:
+- Webhook triggers sync to PostgreSQL
+- Next.js reads from database instead of Git
+- Faster queries for large sites (100+ posts)
+- Database is just a cache—Git is still the source of truth
 
 **Why this works for security:**
 
 - **No admin panel to hack** - there's no login, no dashboard, no attack surface
 - **Version control is built in** - every change is tracked, auditable, reversible
+- **Database is optional** - start with pure Git, add PostgreSQL only if you need the performance
 - **Separation of concerns** - content storage (Git) is separate from content delivery (Next.js)
-- **Stateless by design** - the database is just a cache; Git is always the source of truth
+- **Stateless by design** - if using a database, it's just a cache; Git is always the source of truth
 - **No file uploads** - Markdown and assets go through Git, which has its own security model
 
 **Why this works for simplicity:**
 
+- **Start with zero infrastructure** - just Git + Next.js, no database to set up
 - **One source of truth** - Git is always correct; database sync failures just rebuild from Git
 - **No migrations** - content is Markdown files, not database schemas
+- **Progressive complexity** - add the database only when you need it, not from day one
 - **Works with any Git workflow** - branches, PRs, reviews—all standard Git operations
 - **Platform agnostic** - GitHub, GitLab, Gitea, self-hosted—doesn't matter
 
 ## Real-World Usage
 
-HexCMS currently powers two live sites:
+HexCMS currently powers two live sites, showing both deployment modes:
 
 **Ham Radio Today** ([hamradiotoday.vercel.app](https://hamradiotoday.vercel.app))
 - 42+ posts migrated from Squarespace
 - Two authors (David and I)
-- PostgreSQL backend on Neon
+- **Uses PostgreSQL** (Neon) for fast queries across large content set
 - Zero security incidents since launch
 
 **Lyfe Uncharted** ([lyfe-uncharted.vercel.app](https://lyfe-uncharted.vercel.app))
 - Personal travel blog
 - Migrated from Squarespace
+- **Pure Git mode** (no database) - simple deployment, fewer moving parts
 - Dark theme, gold accents, handwritten fonts
 - Caribbean sailing/cruising content
 
-Both sites run without admin panels, without authentication systems, without vulnerability scanners flagging issues.
+Both sites run without admin panels, without authentication systems, without vulnerability scanners flagging issues. The database decision was purely about performance needs, not architecture requirements.
 
 ## The Problem I Didn't Anticipate
 
@@ -163,13 +174,14 @@ If you're building a blog or documentation site and want:
 - Security without complexity
 - Git-based workflow
 - No admin panel to maintain
-- Simple deployment (Next.js + PostgreSQL)
+- Simple deployment (Next.js + Git, optionally + PostgreSQL)
+- Start simple, add complexity only when needed
 
 HexCMS might be worth exploring.
 
 **Code:** Available on GitHub (HexCMS core + HexCMS Studio repos)
-**Live examples:** Ham Radio Today, Lyfe Uncharted
-**Stack:** Node.js, PostgreSQL, Git webhooks, Next.js
+**Live examples:** Ham Radio Today (with DB), Lyfe Uncharted (pure Git)
+**Stack:** Node.js, Git webhooks, Next.js, PostgreSQL (optional)
 
 ---
 
