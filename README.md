@@ -6,7 +6,7 @@ I write about real problems I'm solving and lessons from actual project work. No
 
 **What I'm working on:**
 - Building AI agents and tools (RAG systems, context management, semantic search)
-- Cybersecurity consulting (CMMC compliance, infrastructure hardening, MSP support)
+- Cybersecurity consulting (infrastructure hardening, compliance, MSP support)
 - Developer tooling (Git-based CMS, AI-friendly interfaces, automation)
 - Bootstrap business growth (referrals, content, building without VC funding)
 
@@ -19,10 +19,10 @@ I write about real problems I'm solving and lessons from actual project work. No
 
 ## About Me
 
-I run Hexaxia Technologies - cybersecurity consulting, infrastructure engineering, and AI product development. Based between the US and Trinidad. Building tools for MSPs and SMBs while helping construction/manufacturing companies with CMMC compliance.
+I run Hexaxia Technologies - cybersecurity consulting, infrastructure engineering, and AI product development. Based between the US and Trinidad. Building tools for MSPs and SMBs while helping construction/manufacturing companies secure their infrastructure.
 
 Before consulting, I spent years in systems administration and network engineering. Now I build things and write about what I learn.
 
 ---
 
-**Aaron Lamb** • Cybersecurity consulting • CMMC compliance • Building in public
+**Aaron Lamb** • Cybersecurity consulting • Infrastructure engineering • Building in public
