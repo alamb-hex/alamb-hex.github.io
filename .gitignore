@@ -7,3 +7,4 @@ Gemfile.lock
 .bundle
 .DS_Store
 linkedin/
+staged/

@@ -26,7 +26,25 @@ Here's what bothered me about existing solutions:
 
 ## Why I Built This
 
-At Hexaxia, we build AI platforms and solve complex infrastructure challenges for clients. Our marketing sites needed secure, simple content management. Rather than compromise our security standards with WordPress or accept the complexity of enterprise CMSs, we built our own. HexCMS now powers our blog, documentation, and client sites.
+I've been in the CMS trenches for over two decades. Started with phpNuke in the early 2000s, lived through the Mambo to Joomla split, mastered SharePoint, Zope + Plone, and spent years deep in WordPress development.
+
+Eventually, I moved from WordPress to Squarespace just to calm my nerves. I didn't want to wake up to some CVE notification that my blog got hacked. Squarespace worked, but customizing beyond the defaults took more effort than it was worth when my career had moved beyond web design.
+
+**The breaking point came from watching clients struggle.**
+
+I have a friend who's brilliant in his field but not tech-savvy. Watching him fumble through basic content updates on his WordPress site hit hard. If someone that smart can't figure out how to update their own website without calling me, the tooling is broken.
+
+The pattern repeated with clients. I'd build secure infrastructure for their operations, but their marketing sites ran on WordPress or enterprise CMSs that required constant maintenance, security updates, and hand-holding. The mismatch was glaring.
+
+About a year and a half ago, I sat down and rethought the entire problem:
+- What does a CMS actually need to do?
+- Who's managing the content?
+- Is it genuinely easy for them (not "easy for developers")?
+- Is it secure by default, not secure if configured correctly?
+
+That questioning led to HexCMS.
+
+**A note on security:** Building with Node.js and Next.js isn't without its own challenges. The JavaScript ecosystem moves fast, and dependency vulnerabilities are a constant concern. I've built tooling to monitor and address these issues systematically. But that's a topic for another post on hardening Next.js applications in production.
 
 ## The HexCMS Approach: Git as the Source of Truth
 
@@ -42,13 +60,22 @@ Perfect for small to medium blogs:
 3. Next.js reads directly from Git and serves content via ISR
 4. No database required
 
-### Mode 2: Git + PostgreSQL (Scale)
+### Mode 2: Git + PostgreSQL (Scale + Features)
 
-For large content sets that create build bottlenecks:
+For large content sets and advanced features:
 1. New Markdown post added to Git
 2. Webhook triggers sync to PostgreSQL
-3. Next.js reads from database for faster builds
-4. Git remains the source of truth (database is a synced cache)
+3. Database migrations import content and images
+4. Next.js reads from database for fast queries and builds
+5. Git remains the source of truth (database is a materialized view)
+
+**Why PostgreSQL matters:**
+- **Solves the "1000+ post" problem** - Traditional static generators (Gatsby, Hugo) rebuild EVERYTHING on every change, making large sites prohibitively slow
+- **Constant build times** - Always < 2 minutes regardless of content volume
+- **Full-text search** - Database-powered search across all content
+- **Multi-author workflows** - Advanced queries for filtering by author, tags, dates
+- **Image optimization** - Store and serve optimized images via PostgreSQL
+- **Complex queries** - Related posts, tag clouds, archive pages run instantly
 
 **Why this matters:**
 - **Start simple, scale when needed** - Git-only until you hit build bottlenecks
@@ -69,10 +96,11 @@ For large content sets that create build bottlenecks:
 
 - **Start with zero infrastructure** - just Git + Next.js, no database to set up
 - **One source of truth** - Git is always correct; database sync failures just rebuild from Git
-- **No migrations** - content is Markdown files, not database schemas
-- **Progressive complexity** - add the database only when you need it, not from day one
+- **Progressive complexity** - add the database only when scale demands it (typically 100+ posts)
+- **Automated migrations** - database sync handles content import automatically via webhook
 - **Works with any Git workflow** - branches, PRs, reviews - all standard Git operations
 - **Platform agnostic** - GitHub, GitLab, Gitea, self-hosted - doesn't matter
+- **Solves the build time problem** - unlike Gatsby/Hugo which rebuild everything, HexCMS syncs only changed files
 
 ## The Problem I Didn't Anticipate
 
@@ -80,7 +108,7 @@ HexCMS worked exactly as designed: secure, simple, Git-based. But it had one fat
 
 **Non-technical users struggled with raw Markdown.**
 
-Even developers who understood Git found the pure Markdown workflow cumbersome. My wife wanted to write blog posts for Lyfe Uncharted - asking her to write in raw Markdown syntax, remember frontmatter formatting, commit with descriptive messages, and push to main was not realistic.
+Even developers who understood Git found the pure Markdown workflow cumbersome. Non-technical content creators wanted to write blog posts - asking them to write in raw Markdown syntax, remember frontmatter formatting, commit with descriptive messages, and push to main was not realistic.
 
 I needed a content editor. But I refused to compromise on the core principles:
 - **No web-based admin panel** (introduces attack surface)
@@ -104,7 +132,7 @@ HexCMS Studio is a **local desktop application** (Electron-style Next.js app) th
 - **Git workflow preserved** - commits go to Git, not a database
 - **Zero server-side code** - it's just a Markdown editor with Git commands
 
-My wife can now write blog posts in a visual editor, click "Publish," and the content goes live - without me having to manage an admin panel, authentication system, or security updates.
+Non-technical users can now write blog posts in a visual editor, click "Publish," and the content goes live - without anyone having to manage an admin panel, authentication system, or security updates.
 
 ## The Design Philosophy
 
@@ -121,9 +149,8 @@ By refusing to add features that compromise the core Git-based model, HexCMS sta
 **What HexCMS doesn't have (intentionally):**
 - User authentication
 - Role-based access control
-- Media library with uploads
+- Web-based media uploads (images go through Git)
 - Plugin system
-- Database migrations for content
 - Admin dashboard
 - API keys or tokens
 
@@ -156,9 +183,9 @@ I initially resisted building HexCMS Studio. "Just use Git!" But separating the 
 
 Some challenges I'm working through as HexCMS matures:
 
-**Multi-author workflows:** Git handles branches and PRs well, but non-technical users struggle with merge conflicts. Exploring ways to make collaborative editing feel natural without compromising the Git-first model.
+**Multi-author workflows:** HexCMS framework supports multi-author via Git (branches, PRs, code review), but HexCMS Studio is single-user focused. Exploring ways to make collaborative editing feel natural in the Studio app without compromising the Git-first model.
 
-**Image optimization:** Currently images go through Git (which works), but optimizing them at build time would reduce bandwidth. Investigating where that logic lives without compromising the Git-first approach.
+**Image optimization:** HexCMS framework includes Next.js image optimization and PostgreSQL storage for images. HexCMS Studio handles local file management and commits to Git. Still exploring the ideal balance between Git storage (simple) and external CDN (performance) for large image libraries.
 
 **Real-time preview:** HexCMS Studio shows Markdown preview, but not the actual rendered site. A local Next.js preview would be ideal - balancing the complexity tradeoff.
 
