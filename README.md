@@ -21,7 +21,7 @@ I write about real problems I'm solving and lessons from actual project work. No
 
 I run Hexaxia Technologies - cybersecurity consulting, infrastructure engineering, and AI product development. Based between the US and Trinidad. Building tools for MSPs and SMBs while helping construction/manufacturing companies secure their infrastructure.
 
-Before consulting, I spent years in systems administration and network engineering. Now I build things and write about what I learn.
+Nearly 30 years in the industry, with 23 years as a consultant. I've spent my career in systems administration, network engineering, and infrastructure security. Now I build things and write about what I learn.
 
 ---
 
