@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "When Your AI Assistant Wastes 9 Attempts: Building Better Interfaces"
+title: "When Your AI Assistant Wastes 3 Attempts: Building Better Interfaces"
 date: 2026-01-20
 categories: [development, ai, tooling]
 tags: [ai, efficiency, automation, rag, developer-experience]
@@ -8,30 +8,30 @@ author: Aaron Lamb
 description: "How a simple wrapper script eliminated 90% of AI command failures. A practical case study in building AI-friendly tooling."
 ---
 
-# When Your AI Assistant Wastes 9 Attempts: Building Better Interfaces
+# When Your AI Assistant Wastes 3 Attempts: Building Better Interfaces
 
-I use an AI coding assistant heavily for technical work. It's great at architecture, debugging, writing code. But I noticed a pattern: certain tasks resulted in multiple failed attempts before success.
+I work closely with an AI assistant across many aspects of my business: strategy, operations, and technical development. It excels at architecture, debugging, writing code. But I noticed a pattern: certain technical tasks resulted in multiple failed attempts before success.
 
-**The symptom:** 9 consecutive errors trying to do one simple thing.
+**The symptom:** 3 consecutive errors trying to do one simple thing.
 
 **The diagnosis:** My tools weren't designed for AI collaboration.
 
 **The fix:** 10 minutes of wrapper scripting eliminated the entire problem class.
 
-## The Problem: 9 Failed Attempts
+## The Problem: 3 Failed Attempts
 
 I asked the AI assistant to add some documents to my RAG (Retrieval Augmented Generation) system. Simple task. Here's what happened:
 
 ```bash
-# Attempt 1-3: Wrong Python command
+# Attempt 1: Wrong Python command
 python episodic_memory.py --add file.md
 # Error: command not found
 
-# Attempt 4-6: Missing virtual environment
+# Attempt 2: Missing virtual environment
 python3 episodic_memory.py --add file.md
 # Error: ModuleNotFoundError: No module named 'chromadb'
 
-# Attempt 7-9: Wrong script entirely
+# Attempt 3: Wrong script entirely
 source venv/bin/activate && python episodic_memory.py --add file.md
 # Error: unrecognized arguments: --add
 ```
@@ -85,7 +85,7 @@ Add in:
 - Different working directory expectations
 - Similar but incompatible argument syntax
 
-You get 9 failed attempts.
+You get 3 failed attempts.
 
 ## The Solution: Single Entry Point
 
@@ -264,14 +264,14 @@ After fixing the wrapper issue, I asked what system packages would help. The AI 
 - **`yq`** - YAML parsing (like `jq` for YAML)
 - **`bat`** - Syntax highlighting
 
-These aren't for the AI—they're for making bash commands more readable and reliable. Better tooling means fewer edge cases the AI has to handle.
+These aren't for the AI. They're for making bash commands more readable and reliable. Better tooling means fewer edge cases the AI has to handle.
 
 **Installing them was trivial. Not installing them would be penny-wise, pound-foolish.**
 
 ## Results
 
 **Before wrapper:**
-- 9 failed attempts to embed 3 files
+- 3 failed attempts to embed 3 files
 - ~2 minutes wasted per RAG operation
 - Frequent context switching to debug
 
@@ -289,7 +289,7 @@ These aren't for the AI—they're for making bash commands more readable and rel
 
 When you see your AI assistant making the same mistakes repeatedly, **the problem isn't the AI**. The problem is your interface wasn't designed for AI collaboration.
 
-**Simple wrappers, clear docs, consistent patterns**—these aren't "nice to have." They're force multipliers for AI-assisted development.
+**Simple wrappers, clear docs, consistent patterns.** These aren't "nice to have." They're force multipliers for AI-assisted development.
 
 The best part? These same improvements make your tools better for humans too.
 
