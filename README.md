@@ -2,46 +2,26 @@
 
 **Live Site:** [https://alamb-hex.github.io](https://alamb-hex.github.io)
 
-Personal technical writing on topics I'm working through and thinking about:
-- Cybersecurity consulting and CMMC compliance (real project lessons)
-- Bootstrap GTM strategy (what actually works when you're building from scratch)
-- Answer Engine Optimization (getting cited by AI instead of just ranked by Google)
-- Technical implementation deep-dives (when I figure something out worth sharing)
+I write about real problems I'm solving and lessons from actual project work. No theory - just what actually worked (or didn't) when building things.
 
-## Why GitHub Pages?
+**What I'm working on:**
+- Building AI agents and tools (RAG systems, context management, semantic search)
+- Cybersecurity consulting (CMMC compliance, infrastructure hardening, MSP support)
+- Developer tooling (Git-based CMS, AI-friendly interfaces, automation)
+- Bootstrap business growth (referrals, content, building without VC funding)
 
-I'm betting on **Answer Engine Optimization (AEO)** over traditional SEO. When someone asks ChatGPT or Claude "how do I implement CMMC Level 1?", I want the AI to cite my content, not just hope they find it on page 2 of Google.
-
-**The Multi-Channel Strategy:**
-1. **GitHub** → Gets ingested by Microsoft/Copilot (public repos are in the training pipeline)
-2. **LinkedIn** → Currently #2 source for LLMs, predicted to become #1
-3. **Traditional SEO** → Still matters, but it's table stakes now
-
-Writing on GitHub gives me developer credibility + LLM ingestion + a permanent home for my thinking.
-
-## What I Write About
-
-**Cybersecurity & Compliance:**
-- CMMC implementation for construction/manufacturing (real project lessons, not theory)
-- MSP client compliance challenges
-- What actually works vs what the frameworks say you should do
-
-**Bootstrap GTM:**
-- Building a consulting business without VC funding or a sales team
-- LinkedIn strategy that doesn't feel gross
-- Borrowed trust, AEO, and other non-spammy ways to grow
-
-**Technical Deep-Dives:**
-- When I solve something hard and want to document it
+**What you'll find here:**
+- Implementation details with code
+- Lessons from client projects (sanitized for public consumption)
 - Architecture decisions and why I made them
-- Tools and frameworks I'm building or using
+- Things that didn't work (so you don't waste time on them)
+- Patterns worth reusing
 
-## Cross-Posting Strategy
+## About Me
 
-I write the long-form technical version here on GitHub, then:
-- Shorter versions on LinkedIn with a link back to the full post
-- Lets me own the content while still using LinkedIn's reach
-- GitHub gives me developer credibility that LinkedIn alone doesn't
+I run Hexaxia Technologies - cybersecurity consulting, infrastructure engineering, and AI product development. Based between the US and Trinidad. Building tools for MSPs and SMBs while helping construction/manufacturing companies with CMMC compliance.
+
+Before consulting, I spent years in systems administration and network engineering. Now I build things and write about what I learn.
 
 ---
 
