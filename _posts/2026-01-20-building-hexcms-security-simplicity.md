@@ -59,32 +59,13 @@ But if you need performance at scale, HexCMS supports an **optional PostgreSQL c
 - **Works with any Git workflow** - branches, PRs, reviews—all standard Git operations
 - **Platform agnostic** - GitHub, GitLab, Gitea, self-hosted—doesn't matter
 
-## Real-World Usage
-
-HexCMS currently powers two live sites, showing both deployment modes:
-
-**Ham Radio Today** ([hamradiotoday.vercel.app](https://hamradiotoday.vercel.app))
-- 42+ posts migrated from Squarespace
-- Two authors (David and I)
-- **Uses PostgreSQL** (Neon) for fast queries across large content set
-- Zero security incidents since launch
-
-**Lyfe Uncharted** ([lyfe-uncharted.vercel.app](https://lyfe-uncharted.vercel.app))
-- Personal travel blog
-- Migrated from Squarespace
-- **Pure Git mode** (no database) - simple deployment, fewer moving parts
-- Dark theme, gold accents, handwritten fonts
-- Caribbean sailing/cruising content
-
-Both sites run without admin panels, without authentication systems, without vulnerability scanners flagging issues. The database decision was purely about performance needs, not architecture requirements.
-
 ## The Problem I Didn't Anticipate
 
 HexCMS worked exactly as designed: secure, simple, Git-based. But it had one fatal flaw for real-world adoption:
 
-**Non-technical users can't write in Git.**
+**People had a problem with drafting in Markdown format.**
 
-My wife wanted to write blog posts for Lyfe Uncharted. She's not a developer. Telling her "just edit the Markdown file in VS Code, commit with a descriptive message, and push to main" was... not realistic.
+Even developers who understood Git struggled with the pure Markdown workflow. My wife wanted to write blog posts for Lyfe Uncharted—asking her to write in raw Markdown syntax, remember frontmatter formatting, commit with descriptive messages, and push to main was... not realistic.
 
 I needed a content editor. But I refused to compromise on the core principles:
 - **No web-based admin panel** (introduces attack surface)
