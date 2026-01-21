@@ -3,14 +3,17 @@ layout: home
 title: Aaron Lamb
 ---
 
-# Technical Writing on Cybersecurity, GTM Strategy, and Building in Public
+# Technical Systems + Strategic Implementation
 
-I write about what I'm working through: cybersecurity consulting, CMMC compliance for construction/manufacturing, bootstrap GTM strategy that doesn't feel gross, and Answer Engine Optimization.
+Hexaxia Technologies: cybersecurity consulting, infrastructure engineering, and AI product development.
 
-Real project lessons, not theory. Building in public.
+**Consulting:** [hexaxia.tech](https://hexaxia.tech) - Security, infrastructure, systems engineering
+**Products:** [hexaxia.ai](https://hexaxia.ai) - AI platforms for business automation
+
+Writing about what I'm learning, building, and figuring out.
 
 ## Recent Posts
 
 ---
 
-**About:** Aaron Lamb • Cybersecurity consulting • CMMC compliance • Bootstrap GTM
+**About:** Aaron Lamb • Founder, Hexaxia Technologies

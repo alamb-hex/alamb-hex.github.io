@@ -176,4 +176,4 @@ HexCMS might be worth exploring.
 
 ---
 
-**About the Author:** Aaron Lamb builds security-focused tools and writes about cybersecurity consulting, CMMC compliance, and bootstrap GTM strategy. Currently working on making Git-based content management accessible to non-developers.
+**About the Author:** Aaron Lamb is the founder of Hexaxia Technologies, specializing in cybersecurity consulting, infrastructure engineering, and AI product development.

@@ -178,4 +178,4 @@ Successful organic content (validated by high save rates) → Amplify through th
 
 ---
 
-**About the Author:** Aaron Lamb is the founder of Hexaxia Technologies, providing cybersecurity consulting and CMMC compliance services for construction firms, manufacturers, and defense contractors.
+**About the Author:** Aaron Lamb is the founder of Hexaxia Technologies, specializing in cybersecurity consulting, infrastructure engineering, and AI product development.
