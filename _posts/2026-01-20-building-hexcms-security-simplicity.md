@@ -35,11 +35,20 @@ Here's the core workflow:
 
 **That's it.** No database required.
 
-But if you need performance at scale, HexCMS supports an **optional PostgreSQL cache**:
-- Webhook triggers sync to PostgreSQL
-- Next.js reads from database instead of Git
-- Faster queries for large sites (100+ posts)
-- Database is just a cache—Git is still the source of truth
+But large blogs face a critical problem: **build/deployment bottlenecks**. Rendering mass amounts of blog content during builds becomes unsustainable. HexCMS supports an **optional PostgreSQL layer** to solve this:
+
+**The workflow:**
+1. New Markdown post added to Git
+2. Webhook triggers import to PostgreSQL
+3. Post moves to a synced folder (out of the build path)
+4. Next.js reads from database instead of Git
+5. If edits needed, post moves back to Git, syncs to database
+
+**Why this matters:**
+- **Offloads build bottlenecks** - large content sets don't slow deployments
+- **Enables advanced features** - authentication, file storage, search, analytics
+- **Provider flexibility** - Supabase (full feature set), Vercel's Neon (simple, low-mid tier)
+- **Git stays the source of truth** - database is synced, not authoritative
 
 **Why this works for security:**
 
@@ -161,8 +170,9 @@ If you're building a blog or documentation site and want:
 HexCMS might be worth exploring.
 
 **Code:** Available on GitHub (HexCMS core + HexCMS Studio repos)
-**Live examples:** Ham Radio Today (with DB), Lyfe Uncharted (pure Git)
 **Stack:** Node.js, Git webhooks, Next.js, PostgreSQL (optional)
+
+**Security note:** HexCMS leverages Next.js security best practices for API routes and data fetching. I'll cover the specific security architecture in a future post on hardening Next.js applications.
 
 ---
 
