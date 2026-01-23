@@ -12,6 +12,7 @@ baseurl: ""
 # Build settings
 markdown: kramdown
 theme: minima
+future: true  # Allow posts with future dates to be published
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
