@@ -28,7 +28,7 @@ Twenty-two times.
 
 It took most of the day. Not because patching is hard. Because doing it twenty-two times is tedious, error-prone, and completely manual.
 
-![HexOps Dashboard](/assets/images/hexops-dashboard.jpg)
+![HexOps Dashboard](https://alamb-hex.github.io/assets/images/hexops-dashboard.jpg)
 
 ## The Real Problem
 
