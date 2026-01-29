@@ -18,7 +18,7 @@ I manage 22 active projects. Most of them run Next.js with React Server Componen
 
 My morning just changed.
 
-Within hours, CISA added CVE-2025-55182 to their Known Exploited Vulnerabilities catalog. Security researchers confirmed China-nexus threat groups were already exploiting it. By the end of the week, a botnet called RondoDox was actively scanning for unpatched servers.
+Within days, CISA added CVE-2025-55182 to their Known Exploited Vulnerabilities catalog. Security researchers confirmed China-nexus threat groups were already exploiting it. By the end of the week, a botnet called RondoDox was actively scanning for unpatched servers.
 
 This wasn't theoretical. This was happening.
 
